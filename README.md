@@ -3,10 +3,10 @@
 
 # O que foi utilizado no projeto,
 
-- Entity Framework, SqlServer - Docker, Flunt & Swagger. 
+- Entity Framework, SqlServer - Docker, Flunt & Swagger. Github Action > SonarCloud
 
 
-#Intalação
+# Intalação
 
 - git clone https://github.com/William-io/Konia.Delivery.git
 
@@ -21,6 +21,11 @@ localizada no [appsettings.Development]
 
 Executar o projeto 
 `dotnet watch run`
+
+# Resultado Sonar
+
+
+![image](https://user-images.githubusercontent.com/70063088/188713136-1d395374-3355-4092-8c90-81b22811bc34.png)
 
 
     
