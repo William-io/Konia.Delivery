@@ -12,8 +12,8 @@ public class Order : Entity
         Validating();
     }
 
-    public double Number { get; set; }
-    public DateTime Date { get; set; }
+    public double Number { get; protected set; }
+    public DateTime Date { get; protected set; }
 
 
     //Utilizando o FLUNT para validações
@@ -21,8 +21,8 @@ public class Order : Entity
     private void Validating()
     {
         var contract = new Contract<Order>()
-            .IsGreaterOrEqualsThan(Number, 1, "Number", "Digite um número acima ou igual á 1");
+            .IsGreaterOrEqualsThan(Number, 1, "Number", "Digite um número acima ou igual á 1")
+            .AreNotEquals(Number, Number, "Number", "Número de pedido existente!!");
         AddNotifications(contract);
     }
-
 }
